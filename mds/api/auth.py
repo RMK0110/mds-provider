@@ -1,11 +1,7 @@
 """
 Authentication module for MDS API calls.
 """
-from mds.api.auth import AuthorizationToken
-import mds
-import mds.providers
 import requests
-import json
 
 
 class AuthorizationToken():
