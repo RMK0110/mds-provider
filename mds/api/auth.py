@@ -75,14 +75,15 @@ class OAuthClientCredentials(AuthorizationToken):
             hasattr(provider, "scope")
         ])
 
+
 class BoltClientCredentials(AuthorizationToken):
     """
-    Represents an authenticated session via the Bolt authentication scheme, documented at:
-    <no URL>
+    Represents an authenticated session via the Bolt authentication scheme.
+
     Currently, your config needs:
+
     * email
     * password
-    * mds_api_url
     * token_url
     """
     def __init__(self, provider):
@@ -110,6 +111,7 @@ class BoltClientCredentials(AuthorizationToken):
             hasattr(provider, "token_url")
         ])
 
+
 class SpinClientCredentials(AuthorizationToken):
     """
     Represents an authenticated session via the Spin authentication scheme, documented at:
@@ -119,7 +121,6 @@ class SpinClientCredentials(AuthorizationToken):
 
     * email
     * password
-    * mds_api_url (see https://github.com/CityOfLosAngeles/mobility-data-specification/pull/296)
     * token_url (try https://web.spin.pm/api/v1/auth_tokens)
     """
     def __init__(self, provider):
